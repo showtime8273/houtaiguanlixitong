@@ -1,17 +1,20 @@
 <template>
-  <div class="homediv"></div>
+  <div class="homediv">
+    <p>斯嘉丽约翰逊</p>
+    <span>贾斯汀比伯</span>
+    <el-button type="warning" plain @click="loginout">警告按钮</el-button>
+  </div>
 </template>
 
 <script>
 export default {
-
-}
-
-</script>
-<style scoped>
-  .homediv {
-    background-color: red;
-    width: 500px;
-    height: 500px;
+  methods: {
+    loginout () {
+      window.sessionStorage.clear()
+      this.$router.push('/login')
+    }
   }
+}
+</script>
+<style lang="less" scoped>
 </style>
